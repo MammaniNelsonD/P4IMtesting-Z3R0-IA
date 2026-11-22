@@ -208,15 +208,16 @@ sed -r 's/\x1B\[[0-9;]*[mK]//g' salida.txt > limpio.txt
 
 ## 📦 Paquete portable
 
-El repositorio incluye además `P4IMtesting-Z3R0-IA.zip` con todo el proyecto listo para llevar a otra máquina:
+El ZIP `P4IMtesting-Z3R0-IA.zip` **no se versiona** en el repositorio; se genera localmente para llevar el proyecto a otra máquina:
 
 ```bash
+zip -r P4IMtesting-Z3R0-IA.zip . -x '.git/*' -x 'P4IMtesting-Z3R0-IA.zip'
 unzip P4IMtesting-Z3R0-IA.zip -d P4IMtesting-Z3R0-IA
 cd P4IMtesting-Z3R0-IA
 python3 P4IMtesting-Z3R0-IA.py
 ```
 
-> 🧳 No incluye el historial de Git ni sesiones personales: solo código, documentación y licencia.
+> 🧳 El paquete incluye código, documentación y licencia; excluye el historial de Git, las sesiones personales y el propio ZIP.
 
 ---
 
